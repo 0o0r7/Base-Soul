@@ -48,8 +48,18 @@ export async function GET(
     const cleanIdentifier = identifier.trim().replace('@', '');
 
     console.log(`Fetching user data for: ${cleanIdentifier}`);
-    console.log(`NEYNAR_API_KEY exists: ${!!process.env.NEYNAR_API_KEY}`);
-    console.log(`NEYNAR_API_KEY length: ${process.env.NEYNAR_API_KEY?.length || 0}`);
+    const apiKeyExists = !!process.env.NEYNAR_API_KEY;
+    const apiKeyLength = process.env.NEYNAR_API_KEY?.length || 0;
+    const apiKeyPreview = process.env.NEYNAR_API_KEY ? `${process.env.NEYNAR_API_KEY.substring(0, 8)}...` : 'MISSING';
+    
+    console.log(`NEYNAR_API_KEY exists: ${apiKeyExists}, length: ${apiKeyLength}, preview: ${apiKeyPreview}`);
+    
+    if (!apiKeyExists) {
+      return NextResponse.json(
+        { error: 'API configuration error: NEYNAR_API_KEY not found in environment' },
+        { status: 500 }
+      );
+    }
     
     const userData = await fetchFullUserData(cleanIdentifier);
     console.log(`Found user: ${userData.user.username} with ${userData.casts.length} casts`);
