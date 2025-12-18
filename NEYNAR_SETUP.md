@@ -2,11 +2,11 @@
 
 ## Your Neynar Credentials
 
-From your Neynar dashboard, I can see:
+Get these from your Neynar dashboard at https://neynar.com:
 
-- **API Key**: `876B11AE-5090-4050-95AF-66CDA9F19537`
-- **Client ID**: `a7294058-c680-46cf-a47b-e17dcd8ca8`
-- **App Name**: `0o0r7.web3's App`
+- **API Key**: Get from your Neynar dashboard (Settings → API Key)
+- **Client ID**: Get from your Neynar dashboard
+- **App Name**: Your app name from Neynar
 
 ## Add to Vercel Environment Variables
 
@@ -19,7 +19,7 @@ From your Neynar dashboard, I can see:
    
    **Variable 1:**
    - Key: `NEYNAR_API_KEY`
-   - Value: `876B11AE-5090-4050-95AF-66CDA9F19537`
+   - Value: `YOUR_NEYNAR_API_KEY` (get from Neynar dashboard)
    - Environment: Select all (Production, Preview, Development)
    - Click "Save"
 
@@ -40,10 +40,10 @@ Run these commands:
 
 ```bash
 cd C:\Users\0o0r7\Desktop\base-soul
-$env:VERCEL_TOKEN="Gts1e0FR27ddgqhxSnVHyl0S"
+$env:VERCEL_TOKEN="YOUR_VERCEL_TOKEN"
 
 # Add NEYNAR_API_KEY (you'll be prompted to enter the value)
-echo "876B11AE-5090-4050-95AF-66CDA9F19537" | vercel env add NEYNAR_API_KEY production --token $env:VERCEL_TOKEN
+echo "YOUR_NEYNAR_API_KEY" | vercel env add NEYNAR_API_KEY production --token $env:VERCEL_TOKEN
 
 # Add NEXT_PUBLIC_APP_URL
 echo "https://base-soul.vercel.app" | vercel env add NEXT_PUBLIC_APP_URL production --token $env:VERCEL_TOKEN
