@@ -14,11 +14,12 @@ async function neynarFetch<T>(endpoint: string): Promise<T> {
   console.log(`API Key present: ${NEYNAR_API_KEY ? 'Yes' : 'No'}`);
 
   const response = await fetch(url, {
+    method: 'GET',
     headers: {
       'accept': 'application/json',
       'api_key': NEYNAR_API_KEY,
     },
-    next: { revalidate: 300 }, // Cache for 5 minutes
+    cache: 'no-store', // Don't cache API calls
   });
 
   if (!response.ok) {
