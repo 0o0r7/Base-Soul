@@ -17,7 +17,7 @@ async function neynarFetch<T>(endpoint: string): Promise<T> {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
-      'api_key': NEYNAR_API_KEY,
+      'x-api-key': NEYNAR_API_KEY,
     },
     cache: 'no-store', // Don't cache API calls
   });
