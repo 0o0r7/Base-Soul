@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { SoulResult, UserData } from '@/lib/types';
 import { computeSoul } from '@/lib/soulEngine';
@@ -9,7 +9,7 @@ import { LoadingState } from '@/components/LoadingState';
 import { ErrorState } from '@/components/ErrorState';
 import { APP_URL } from '@/lib/constants';
 
-export default function SharePage() {
+function SharePageContent() {
   const searchParams = useSearchParams();
   const fid = searchParams.get('fid');
   const [soul, setSoul] = useState<SoulResult | null>(null);
@@ -78,6 +78,20 @@ export default function SharePage() {
         ) : null}
       </div>
     </main>
+  );
+}
+
+export default function SharePage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-soul-dark flex items-center justify-center p-4">
+        <div className="w-full max-w-md">
+          <LoadingState />
+        </div>
+      </main>
+    }>
+      <SharePageContent />
+    </Suspense>
   );
 }
 
