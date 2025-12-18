@@ -4,6 +4,10 @@ const NEYNAR_API_KEY = process.env.NEYNAR_API_KEY || '';
 const NEYNAR_BASE_URL = 'https://api.neynar.com/v2/farcaster';
 
 async function neynarFetch<T>(endpoint: string): Promise<T> {
+  if (!NEYNAR_API_KEY) {
+    throw new Error('NEYNAR_API_KEY is not set in environment variables');
+  }
+
   const response = await fetch(
     `${NEYNAR_BASE_URL}${endpoint}`,
     {
@@ -16,8 +20,9 @@ async function neynarFetch<T>(endpoint: string): Promise<T> {
   );
 
   if (!response.ok) {
-    const error = await response.text();
-    throw new Error(`Neynar API error: ${response.status} - ${error}`);
+    const errorText = await response.text();
+    console.error(`Neynar API error [${response.status}]:`, errorText);
+    throw new Error(`Neynar API error: ${response.status} - ${errorText}`);
   }
 
   return response.json();

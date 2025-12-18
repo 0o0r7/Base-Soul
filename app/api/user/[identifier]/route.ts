@@ -48,6 +48,8 @@ export async function GET(
     const cleanIdentifier = identifier.trim().replace('@', '');
 
     console.log(`Fetching user data for: ${cleanIdentifier}`);
+    console.log(`NEYNAR_API_KEY exists: ${!!process.env.NEYNAR_API_KEY}`);
+    
     const userData = await fetchFullUserData(cleanIdentifier);
     console.log(`Found user: ${userData.user.username} with ${userData.casts.length} casts`);
 
@@ -55,16 +57,26 @@ export async function GET(
   } catch (error) {
     console.error('Error fetching user:', error);
     const message = error instanceof Error ? error.message : 'Unknown error';
+    const errorDetails = error instanceof Error ? error.stack : String(error);
 
-    if (message.includes('not found')) {
+    console.error('Full error details:', errorDetails);
+
+    if (message.includes('not found') || message.includes('404')) {
       return NextResponse.json(
-        { error: 'User not found' },
+        { error: 'User not found', details: message },
         { status: 404 }
       );
     }
 
+    if (message.includes('NEYNAR_API_KEY')) {
+      return NextResponse.json(
+        { error: 'API configuration error', details: message },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json(
-      { error: 'Failed to fetch user data' },
+      { error: 'Failed to fetch user data', details: message },
       { status: 500 }
     );
   }
