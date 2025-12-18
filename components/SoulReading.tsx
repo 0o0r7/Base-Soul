@@ -18,7 +18,7 @@ export const SoulReading: React.FC<{ result: SoulResult }> = ({ result }) => {
       {isOpen && (
         <div className="mt-4 p-6 bg-black/40 rounded-xl border border-white/10 animate-in fade-in slide-in-from-top-2 duration-300">
           <p className="text-gray-300 leading-relaxed mb-6">
-            {result.reasoning.long}
+            {result.reasoning?.long || result.archetype.description}
           </p>
           
           <div className="space-y-3">
