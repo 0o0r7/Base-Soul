@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://base-soul.vercel.app'),
   title: 'Base Soul | Discover Your Digital Soul',
   description: 'Your Farcaster presence reveals your true soul. Discover your unique aura, archetype, and share it with the world.',
   openGraph: {
