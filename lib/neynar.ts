@@ -16,7 +16,7 @@ async function neynarFetch<T>(endpoint: string): Promise<T> {
   const response = await fetch(url, {
     method: 'GET',
     headers: {
-      'accept': 'application/json',
+      'Accept': 'application/json',
       'api_key': NEYNAR_API_KEY,
     },
     cache: 'no-store', // Don't cache API calls
