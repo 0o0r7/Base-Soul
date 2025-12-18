@@ -1,6 +1,7 @@
 import { NeynarUser, NeynarCast, UserData } from './types';
 
-const NEYNAR_API_KEY = process.env.NEYNAR_API_KEY || '';
+// Get API key from environment - try both possible names
+const NEYNAR_API_KEY = process.env.NEYNAR_API_KEY || process.env.NEXT_PUBLIC_NEYNAR_API_KEY || '';
 const NEYNAR_BASE_URL = 'https://api.neynar.com/v2/farcaster';
 
 async function neynarFetch<T>(endpoint: string): Promise<T> {
