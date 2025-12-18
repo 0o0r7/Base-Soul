@@ -49,6 +49,7 @@ export async function GET(
 
     console.log(`Fetching user data for: ${cleanIdentifier}`);
     console.log(`NEYNAR_API_KEY exists: ${!!process.env.NEYNAR_API_KEY}`);
+    console.log(`NEYNAR_API_KEY length: ${process.env.NEYNAR_API_KEY?.length || 0}`);
     
     const userData = await fetchFullUserData(cleanIdentifier);
     console.log(`Found user: ${userData.user.username} with ${userData.casts.length} casts`);
