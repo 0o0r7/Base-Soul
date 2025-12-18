@@ -11,7 +11,7 @@ async function neynarFetch<T>(endpoint: string): Promise<T> {
 
   const url = `${NEYNAR_BASE_URL}${endpoint}`;
   console.log(`Fetching from Neynar: ${url}`);
-  console.log(`API Key present: ${NEYNAR_API_KEY ? 'Yes' : 'No'}, length: ${NEYNAR_API_KEY.length}`);
+  console.log(`API Key present: ${NEYNAR_API_KEY ? 'Yes' : 'No'}`);
 
   const response = await fetch(url, {
     headers: {
