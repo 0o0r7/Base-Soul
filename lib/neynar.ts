@@ -5,19 +5,21 @@ const NEYNAR_BASE_URL = 'https://api.neynar.com/v2/farcaster';
 
 async function neynarFetch<T>(endpoint: string): Promise<T> {
   if (!NEYNAR_API_KEY) {
+    console.error('NEYNAR_API_KEY is missing!');
     throw new Error('NEYNAR_API_KEY is not set in environment variables');
   }
 
-  const response = await fetch(
-    `${NEYNAR_BASE_URL}${endpoint}`,
-    {
-      headers: {
-        'accept': 'application/json',
-        'api_key': NEYNAR_API_KEY,
-      },
-      next: { revalidate: 300 }, // Cache for 5 minutes
-    }
-  );
+  const url = `${NEYNAR_BASE_URL}${endpoint}`;
+  console.log(`Fetching from Neynar: ${url}`);
+  console.log(`API Key present: ${NEYNAR_API_KEY ? 'Yes' : 'No'}, length: ${NEYNAR_API_KEY.length}`);
+
+  const response = await fetch(url, {
+    headers: {
+      'accept': 'application/json',
+      'api_key': NEYNAR_API_KEY,
+    },
+    next: { revalidate: 300 }, // Cache for 5 minutes
+  });
 
   if (!response.ok) {
     const errorText = await response.text();
