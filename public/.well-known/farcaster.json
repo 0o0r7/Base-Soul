@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjkxOTk1NCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweGU5NTM4QkMxRTI3YjQ2NWM2MzBmNDI4NjE2N0EzOTMzNTZBNjAwRDUifQ",
+    "payload": "eyJkb21haW4iOiJiYXNlLXNvdWwudmVyY2VsLmFwcCJ9",
+    "signature": "MOCK_SIGNATURE_REPLACE_WITH_REAL_ONE"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Base Soul",
+    "iconUrl": "https://base-soul.vercel.app/icon.png",
+    "homeUrl": "https://base-soul.vercel.app",
+    "imageUrl": "https://base-soul.vercel.app/api/og?default=true",
+    "buttonTitle": "Reveal My Soul",
+    "splashImageUrl": "https://base-soul.vercel.app/splash.png",
+    "splashBackgroundColor": "#0a0a0a",
+    "webhookUrl": "https://base-soul.vercel.app/api/webhook"
+  }
+}
