@@ -7,11 +7,11 @@
   "frame": {
     "version": "1",
     "name": "Base Soul",
-    "iconUrl": "https://your-app.vercel.app/icon.png",
-    "homeUrl": "https://your-app.vercel.app",
-    "imageUrl": "https://your-app.vercel.app/api/og?default=true",
+    "iconUrl": "https://base-soul.vercel.app/icon.png",
+    "homeUrl": "https://base-soul.vercel.app",
+    "imageUrl": "https://base-soul.vercel.app/api/og?default=true",
     "buttonTitle": "Reveal My Soul",
-    "splashImageUrl": "https://your-app.vercel.app/splash.png",
+    "splashImageUrl": "https://base-soul.vercel.app/splash.png",
     "splashBackgroundColor": "#0a0a0f"
   }
 }

@@ -14,11 +14,12 @@ async function neynarFetch<T>(endpoint: string): Promise<T> {
   console.log(`Fetching from Neynar: ${url}`);
   console.log(`API Key present: ${NEYNAR_API_KEY ? 'Yes' : 'No'}`);
 
+  // Try both header formats - Neynar API v2 uses 'api_key' header
   const response = await fetch(url, {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
-      'x-api-key': NEYNAR_API_KEY,
+      'api_key': NEYNAR_API_KEY,
     },
     cache: 'no-store', // Don't cache API calls
   });
