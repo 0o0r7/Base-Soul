@@ -12,7 +12,14 @@
     "imageUrl": "https://base-soul.vercel.app/api/og?default=true",
     "buttonTitle": "Reveal My Soul",
     "splashImageUrl": "https://base-soul.vercel.app/splash.png",
-    "splashBackgroundColor": "#0a0a0f"
+    "splashBackgroundColor": "#0a0a0f",
+    "primaryCategory": "entertainment",
+    "tags": ["soul", "personality", "farcaster", "base", "analytics", "archetype", "discovery"],
+    "subtitle": "Discover your digital soul on Base",
+    "description": "Analyze your Farcaster activity to reveal your unique Soul Color, visual aura, and Archetype. Share your digital identity with the world.",
+    "ogTitle": "Base Soul | Discover Your Digital Soul",
+    "ogDescription": "Your Farcaster presence reveals your true soul. Discover your unique aura, archetype, and share it with the world.",
+    "ogImageUrl": "https://base-soul.vercel.app/api/og?default=true"
   }
 }
 
