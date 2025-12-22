@@ -53,3 +53,6 @@ export const NascentSoul: React.FC<NascentSoulProps> = ({ soul }) => {
   );
 };
 
+
+
+

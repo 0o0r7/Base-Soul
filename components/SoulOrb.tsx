@@ -196,3 +196,6 @@ export const SoulOrb: React.FC<SoulOrbProps> = ({
   );
 };
 
+
+
+

@@ -129,3 +129,6 @@ export const SoulDisplay: React.FC<SoulDisplayProps> = ({ soul }) => {
   );
 };
 
+
+
+

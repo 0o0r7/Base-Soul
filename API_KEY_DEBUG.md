@@ -40,3 +40,6 @@ curl -H "api_key: [REDACTED-NEYNAR-KEY]" \
 3. **Verify API key in Neynar dashboard** - check if it's active
 4. **Try regenerating API key** if current one doesn't work
 
+
+
+

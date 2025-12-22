@@ -47,3 +47,6 @@ export function classifyArchetype(
   return ARCHETYPES.find(a => a.id === archetypeId) || ARCHETYPES.find(a => a.id === 'balanced')!;
 }
 
+
+
+
