@@ -116,3 +116,4 @@ export function extractSignals(user: NeynarUser, casts: NeynarCast[]): Behaviora
 
 
 
+
