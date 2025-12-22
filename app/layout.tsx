@@ -30,6 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
+      <head>
+        <meta name="base:app_id" content="69493f6ed19763ca26ddc9d7" />
+      </head>
       <body>{children}</body>
     </html>
   );
