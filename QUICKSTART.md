@@ -46,3 +46,6 @@ These can be simple placeholders for now, but should be branded for production.
 4. Sign the Farcaster manifest
 5. Share your Mini App!
 
+
+
+

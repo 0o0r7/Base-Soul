@@ -66,3 +66,6 @@ A Farcaster Mini App that analyzes a user's Farcaster activity and generates a u
 
 MIT
 
+
+
+

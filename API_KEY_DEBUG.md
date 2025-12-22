@@ -40,3 +40,6 @@ curl -H "api_key: 876B11AE-5090-4050-95AF-66CDA9F19537" \
 3. **Verify API key in Neynar dashboard** - check if it's active
 4. **Try regenerating API key** if current one doesn't work
 
+
+
+
