@@ -4,9 +4,10 @@
     "payload": "eyJkb21haW4iOiJiYXNlLXNvdWwudmVyY2VsLmFwcCJ9",
     "signature": "qwc5ieQNVC2+6RAHyapiqEDqz8gH9FhWdyNHd7X67ahHu0tMwxq+dOkotbuGKONy9YiD5y3wD1OPLibteYbL8Bs="
   },
-  "frame": {
+  "miniapp": {
     "version": "1",
     "name": "Base Soul",
+    "canonicalDomain": "base-soul.vercel.app",
     "iconUrl": "https://base-soul.vercel.app/icon.png",
     "homeUrl": "https://base-soul.vercel.app",
     "imageUrl": "https://base-soul.vercel.app/api/og?default=true",
