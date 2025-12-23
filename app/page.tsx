@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { sdk } from '@farcaster/miniapp-sdk';
 import { SoulResult, UserData } from '@/lib/types';
 import { computeSoul } from '@/lib/soulEngine';
 import { UsernameInput } from '@/components/UsernameInput';
@@ -43,10 +44,17 @@ export default function HomePage() {
     setSoul(null);
   };
 
-  // Check for Farcaster context on mount
+  // Initialize Farcaster SDK and call ready()
   useEffect(() => {
-    // If using Farcaster Mini App SDK, you would detect context here
-    // For now, we just show the input
+    // Call sdk.actions.ready() to hide splash screen
+    try {
+      sdk.actions.ready();
+      console.log('Farcaster SDK ready() called');
+    } catch (error) {
+      // SDK might not be available if not running in Farcaster context
+      // This is fine for web browser access
+      console.log('Farcaster SDK not available (running outside Farcaster)');
+    }
   }, []);
 
   return (
@@ -75,6 +83,10 @@ export default function HomePage() {
     </main>
   );
 }
+
+
+
+
 
 
 
