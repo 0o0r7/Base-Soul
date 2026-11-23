@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="832" height="1248" viewBox="0 0 832 1248">
+  <defs>
+    <radialGradient id="sbg" cx="50%" cy="36%" r="80%">
+      <stop offset="0%" stop-color="#141A33"/>
+      <stop offset="60%" stop-color="#0C0F1F"/>
+      <stop offset="100%" stop-color="#0A0A0F"/>
+    </radialGradient>
+    <radialGradient id="sglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6C5CFF" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#3D6BFF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#3D6BFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sorb" cx="41%" cy="36%" r="78%">
+      <stop offset="0%" stop-color="#F4F8FF"/>
+      <stop offset="18%" stop-color="#B7C9FF"/>
+      <stop offset="42%" stop-color="#4D74FF"/>
+      <stop offset="66%" stop-color="#3B41E8"/>
+      <stop offset="85%" stop-color="#7A2BE0"/>
+      <stop offset="100%" stop-color="#B42BD9"/>
+    </radialGradient>
+    <radialGradient id="sfloor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38D9FF" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#38D9FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0052FF"/>
+      <stop offset="55%" stop-color="#8B5CFF"/>
+      <stop offset="100%" stop-color="#FF5CA8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="832" height="1248" fill="url(#sbg)"/>
+  <circle cx="416" cy="430" r="400" fill="url(#sglow)"/>
+  <ellipse cx="416" cy="770" rx="280" ry="52" fill="url(#sfloor)"/>
+
+  <circle cx="416" cy="430" r="355" fill="none" stroke="url(#sring)" stroke-width="13" opacity="0.85"/>
+  <circle cx="667" cy="179" r="19" fill="#FF7FBE"/>
+  <circle cx="165" cy="179" r="9" fill="#5AC8FF" opacity="0.9"/>
+
+  <circle cx="416" cy="430" r="245" fill="url(#sorb)"/>
+  <ellipse cx="348" cy="355" rx="105" ry="68" fill="#FFFFFF" opacity="0.22"/>
+
+  <path d="M620 684 L627 704 L647 711 L627 718 L620 738 L613 718 L593 711 L613 704 Z" fill="#9BE7FF" opacity="0.95"/>
+
+  <text x="416" y="1000" font-family="DejaVu Sans" font-size="104" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Base Soul</text>
+  <text x="416" y="1078" font-family="DejaVu Sans" font-size="46" fill="#B9C2D8" text-anchor="middle">Discover Your Digital Soul</text>
+</svg>

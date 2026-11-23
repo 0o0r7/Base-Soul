@@ -1,5 +1,7 @@
 # Base Soul
 
+![Base Soul — soul orb logo](public/icon.png)
+
 A Farcaster Mini App that analyzes a user's Farcaster activity and generates a unique Soul Color, visual aura, and Archetype with explainable reasoning.
 
 > **Live app:** <https://base-soul.vercel.app> · manifest at `public/.well-known/farcaster.json` · session-by-session dev notes in [`docs/devlog/`](docs/devlog/README.md)
@@ -67,12 +69,3 @@ A Farcaster Mini App that analyzes a user's Farcaster activity and generates a u
 ## License
 
 MIT
-
-
-
-
-
-
-
-
-

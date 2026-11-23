@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="44%" r="72%">
+      <stop offset="0%" stop-color="#131B3E"/>
+      <stop offset="55%" stop-color="#0A0F26"/>
+      <stop offset="100%" stop-color="#04060F"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6C5CFF" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#3D6BFF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#3D6BFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb" cx="41%" cy="36%" r="78%">
+      <stop offset="0%" stop-color="#F4F8FF"/>
+      <stop offset="18%" stop-color="#B7C9FF"/>
+      <stop offset="42%" stop-color="#4D74FF"/>
+      <stop offset="66%" stop-color="#3B41E8"/>
+      <stop offset="85%" stop-color="#7A2BE0"/>
+      <stop offset="100%" stop-color="#B42BD9"/>
+    </radialGradient>
+    <radialGradient id="floor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38D9FF" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#38D9FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0052FF"/>
+      <stop offset="55%" stop-color="#8B5CFF"/>
+      <stop offset="100%" stop-color="#FF5CA8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <circle cx="256" cy="248" r="244" fill="url(#glow)"/>
+  <ellipse cx="256" cy="432" rx="146" ry="30" fill="url(#floor)"/>
+
+  <circle cx="256" cy="248" r="182" fill="none" stroke="url(#ring)" stroke-width="8" opacity="0.85"/>
+  <circle cx="385" cy="119" r="12" fill="#FF7FBE"/>
+  <circle cx="127" cy="119" r="6" fill="#5AC8FF" opacity="0.9"/>
+
+  <circle cx="256" cy="248" r="122" fill="url(#orb)"/>
+  <ellipse cx="214" cy="204" rx="52" ry="34" fill="#FFFFFF" opacity="0.22"/>
+
+  <path d="M330 375 L334 386 L345 390 L334 394 L330 405 L326 394 L315 390 L326 386 Z" fill="#9BE7FF" opacity="0.95"/>
+</svg>
